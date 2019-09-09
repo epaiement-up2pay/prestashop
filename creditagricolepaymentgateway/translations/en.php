@@ -3,8 +3,8 @@
 global $_MODULE;
 $_MODULE = array();
 $_MODULE['<{creditagricolepaymentgateway}prestashop>wirecardajax_2bf596c7158df8d7b10e2318ace1297c'] = 'Test failed, please check your credentials.';
-$_MODULE['<{creditagricolepaymentgateway}prestashop>wirecardajax_adf26da509e583625c2c43e4be5bbc7a'] = 'Attention: Please check your credentials within the URL setting fields. You might have configured/combined a productive account with a test account.';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>wirecardajax_569fc81dca0ffb9beeb8a70272b94e66'] = 'Merchant configuration was successfully tested.';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>wirecardajax_adf26da509e583625c2c43e4be5bbc7a'] = 'Attention: Please check your credentials within the URL setting fields. You might have configured/combined a productive account with a test account.';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>wirecardsupport_c2fb8155114a173b41a33639e58fb5b7'] = 'Send support request';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>wirecardsupport_66a375d1669793eb4a2c0a2cb3a4202b'] = 'Your email address';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>wirecardsupport_9b1ef1976b69fb0212b8ed98e58d2f32'] = 'Your message';
@@ -57,6 +57,10 @@ $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_77de2a7d1e
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_b39c8900735997fa7293592e32228950'] = 'Payment Action';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_1711df867832a3dd696b5c0adab76f2e'] = 'Authorization';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_824bc4edae9cb93f0dd8aac3597e36d8'] = 'Purchase';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_e91cf3ad3feafd69d6b1b794cd6792f3'] = 'Challenge Indicator';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_b95378406a91414a4c1e285c4ea1debd'] = 'No preference';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_396d3ebb402e24b2c96874027976829b'] = 'No challenge requested';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_865a6e1328fcf307682e4488d32359fe'] = 'Challenge requested';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_3ea9eb5a6ed433246bc75c7016ac89bc'] = 'Descriptor';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_36245276e84306a410a410785ac986b3'] = 'Send Additional Information';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_52a9f0f1be1795bbb80faeb35b0d9f57'] = 'Enable One-Click Checkout';
