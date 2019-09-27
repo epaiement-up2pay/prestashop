@@ -25,6 +25,8 @@ $_MODULE['<{creditagricolepaymentgateway}prestashop>wirecardtransactions_ced02f7
 $_MODULE['<{creditagricolepaymentgateway}prestashop>wirecardtransactions_4621508b093588359d89d15019b0c713'] = 'Transaction State';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>wirecardtransactions_3bd56bbf8734eb9b2d39537bbbf92cdd'] = 'No transaction found.';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>wirecardtransactions_801af80081d36bd4abbc956818f28de9'] = 'No valid payment for this transaction found.';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>creditcard_024c0eb2f6a44bd14a71b780cc114723'] = 'Use card';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>creditcard_3fcc1446b74b3c855555d4331bb7f53f'] = 'Delete card';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentalipaycrossborder_9e61d8d6a6cb85af0cc80f49d19a95aa'] = 'Enable';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentalipaycrossborder_7c98f6003387a22f8930e088861ac1d1'] = 'Uaktywnić Crédit Agricole Alipay Crossborder';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentalipaycrossborder_2433374a7348266aa2a46eab61a2fc5b'] = 'Title';
@@ -202,9 +204,6 @@ $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsofort_ca223103c3b517
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsofort_77de2a7d1e366bd416e2a9e186e9f268'] = 'Hasło HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsofort_36245276e84306a410a410785ac986b3'] = 'Wyślij dodatkową informację';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsofort_7daacf9143e60bd1d97b926e8d0754d6'] = 'Test konfiguracji kart kredytowych';
-$_MODULE['<{creditagricolepaymentgateway}prestashop>creditagricolepaymentgateway_a5ffbe10bf416c7db8773f0ed801a022'] = 'bramka płatnicza Crédit Agricole';
-$_MODULE['<{creditagricolepaymentgateway}prestashop>creditagricolepaymentgateway_62e5cde27ad49944de104bbe346fd8e8'] = 'bramka płatnicza Crédit Agricole dla Prestashop';
-$_MODULE['<{creditagricolepaymentgateway}prestashop>creditagricolepaymentgateway_fec1fd6c6e6d2422514a8107cc9784c1'] = 'Na pewno deinstalować?';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>creditagricolepaymentgateway_b88de16a1331eeff63ab5c701d255d62'] = 'Crédit Agricole Transactions';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>creditagricolepaymentgateway_4ae7d7707a0073ce0f7b2dc51158630d'] = 'Crédit Agricole Support';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>creditagricolepaymentgateway_123e952673362198bf7d5c5e54cff52e'] = 'Crédit Agricole Ajax';
@@ -212,6 +211,9 @@ $_MODULE['<{creditagricolepaymentgateway}prestashop>creditagricolepaymentgateway
 $_MODULE['<{creditagricolepaymentgateway}prestashop>creditagricolepaymentgateway_abfa4ee8f05fae13b8954098fca4f0f4'] = 'Ustawiena zaktualnizowane';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>creditagricolepaymentgateway_f9e92a0727609b56780f28afa11da702'] = 'Uaktywniony';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>creditagricolepaymentgateway_9963e13ca603bfe6f09af5673b058eb7'] = 'Zdeaktywowany';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>creditagricolepaymentgateway_a5ffbe10bf416c7db8773f0ed801a022'] = 'bramka płatnicza Crédit Agricole';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>creditagricolepaymentgateway_62e5cde27ad49944de104bbe346fd8e8'] = 'bramka płatnicza Crédit Agricole dla Prestashop';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>creditagricolepaymentgateway_fec1fd6c6e6d2422514a8107cc9784c1'] = 'Na pewno deinstalować?';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>creditagricolepaymentgateway_68d1cb0fc728634d779fa66727f49dac'] = 'Ustawienia metod płatności';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>creditagricolepaymentgateway_363ddc2d1e8476ebc0d9c0eb6b69878e'] = 'Zapisz';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>view_c01d298d870c928aef65a36ed62c30ea'] = 'Informacja o transakcji';
