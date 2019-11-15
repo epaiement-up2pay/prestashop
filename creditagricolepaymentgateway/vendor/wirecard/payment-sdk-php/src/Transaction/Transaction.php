@@ -55,6 +55,7 @@ abstract class Transaction extends Risk
     const TYPE_VOID_REFUND_CAPTURE = 'void-refund-capture';
     const TYPE_VOID_REFUND_PURCHASE = 'void-refund-purchase';
     const TYPE_VOID_CREDIT = 'void-credit';
+    const TYPE_CHECK_PAYER_RESPONSE = 'check-payer-response';
     
 
     /**
@@ -450,7 +451,10 @@ abstract class Transaction extends Risk
         if (null !== $this->locale) {
             $result['locale'] = $this->locale;
         } else {
-            $result['locale'] = substr(Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']), 0, 2);
+            $result['locale'] = 'en';
+            if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+                $result['locale'] = substr(Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']), 0, 2);
+            }
         }
 
         if (null !== $this->entryMode) {

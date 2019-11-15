@@ -1,22 +1,20 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Http\Client\Common;
 
-use Http\Client\Common\Exception\HttpClientNoMatchException;
+use Http\Client\Exception\RequestException;
 use Http\Client\HttpAsyncClient;
+use Http\Client\HttpClient;
 use Http\Message\RequestMatcher;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestInterface;
-use Psr\Http\Message\ResponseInterface;
 
 /**
- * {@inheritdoc}
+ * Route a request to a specific client in the stack based using a RequestMatcher.
  *
  * @author Joel Wurtz <joel.wurtz@gmail.com>
  */
-final class HttpClientRouter implements HttpClientRouterInterface
+final class HttpClientRouter implements HttpClient, HttpAsyncClient
 {
     /**
      * @var array
@@ -26,9 +24,11 @@ final class HttpClientRouter implements HttpClientRouterInterface
     /**
      * {@inheritdoc}
      */
-    public function sendRequest(RequestInterface $request): ResponseInterface
+    public function sendRequest(RequestInterface $request)
     {
-        return $this->chooseHttpClient($request)->sendRequest($request);
+        $client = $this->chooseHttpClient($request);
+
+        return $client->sendRequest($request);
     }
 
     /**
@@ -36,15 +36,18 @@ final class HttpClientRouter implements HttpClientRouterInterface
      */
     public function sendAsyncRequest(RequestInterface $request)
     {
-        return $this->chooseHttpClient($request)->sendAsyncRequest($request);
+        $client = $this->chooseHttpClient($request);
+
+        return $client->sendAsyncRequest($request);
     }
 
     /**
      * Add a client to the router.
      *
-     * @param ClientInterface|HttpAsyncClient $client
+     * @param HttpClient|HttpAsyncClient|ClientInterface $client
+     * @param RequestMatcher             $requestMatcher
      */
-    public function addClient($client, RequestMatcher $requestMatcher): void
+    public function addClient($client, RequestMatcher $requestMatcher)
     {
         $this->clients[] = [
             'matcher' => $requestMatcher,
@@ -55,9 +58,11 @@ final class HttpClientRouter implements HttpClientRouterInterface
     /**
      * Choose an HTTP client given a specific request.
      *
-     * @return ClientInterface|HttpAsyncClient
+     * @param RequestInterface $request
+     *
+     * @return HttpClient|HttpAsyncClient|ClientInterface
      */
-    private function chooseHttpClient(RequestInterface $request)
+    protected function chooseHttpClient(RequestInterface $request)
     {
         foreach ($this->clients as $client) {
             if ($client['matcher']->matches($request)) {
@@ -65,6 +70,6 @@ final class HttpClientRouter implements HttpClientRouterInterface
             }
         }
 
-        throw new HttpClientNoMatchException('No client found for the specified request', $request);
+        throw new RequestException('No client found for the specified request', $request);
     }
 }

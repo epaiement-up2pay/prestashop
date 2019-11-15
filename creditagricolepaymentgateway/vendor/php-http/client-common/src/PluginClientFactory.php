@@ -1,10 +1,9 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Http\Client\Common;
 
 use Http\Client\HttpAsyncClient;
+use Http\Client\HttpClient;
 use Psr\Http\Client\ClientInterface;
 
 /**
@@ -16,7 +15,7 @@ use Psr\Http\Client\ClientInterface;
 final class PluginClientFactory
 {
     /**
-     * @var callable|null
+     * @var callable
      */
     private static $factory;
 
@@ -28,6 +27,8 @@ final class PluginClientFactory
      * application execution.
      *
      * @internal
+     *
+     * @param callable $factory
      */
     public static function setFactory(callable $factory)
     {
@@ -35,17 +36,19 @@ final class PluginClientFactory
     }
 
     /**
-     * @param ClientInterface|HttpAsyncClient $client
-     * @param Plugin[]                        $plugins
-     * @param array                           $options {
+     * @param HttpClient|HttpAsyncClient|ClientInterface $client
+     * @param Plugin[]                                   $plugins
+     * @param array                                      $options {
      *
      *     @var string $client_name to give client a name which may be used when displaying client information  like in
      *         the HTTPlugBundle profiler.
      * }
      *
      * @see PluginClient constructor for PluginClient specific $options.
+     *
+     * @return PluginClient
      */
-    public function createClient($client, array $plugins = [], array $options = []): PluginClient
+    public function createClient($client, array $plugins = [], array $options = [])
     {
         if (static::$factory) {
             $factory = static::$factory;

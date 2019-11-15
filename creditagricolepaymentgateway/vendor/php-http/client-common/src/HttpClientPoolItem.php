@@ -1,29 +1,18 @@
 <?php
 
-declare(strict_types=1);
+namespace Http\Client\Common;
 
-namespace Http\Client\Common\HttpClientPool;
-
-use Http\Client\Common\FlexibleHttpClient;
 use Http\Client\HttpAsyncClient;
 use Http\Client\HttpClient;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestInterface;
 use Http\Client\Exception;
-use Psr\Http\Message\ResponseInterface;
 
 /**
  * A HttpClientPoolItem represent a HttpClient inside a Pool.
  *
- * It is disabled when a request failed and can be reenabled after a certain number of seconds.
- * It also keep tracks of the current number of open requests the client is currently being sending
- * (only usable for async method).
- *
- * This class is used internally in the client pools and is not supposed to be used anywhere else.
- *
- * @final
- *
- * @internal
+ * It is disabled when a request failed and can be reenable after a certain number of seconds
+ * It also keep tracks of the current number of request the client is currently sending (only usable for async method)
  *
  * @author Joel Wurtz <joel.wurtz@gmail.com>
  */
@@ -40,11 +29,7 @@ class HttpClientPoolItem implements HttpClient, HttpAsyncClient
     private $disabledAt;
 
     /**
-     * Number of seconds until this client is enabled again after an error.
-     *
-     * null: never reenable this client.
-     *
-     * @var int|null
+     * @var int|null Number of seconds after this client is reenable, by default null: never reenable this client
      */
     private $reenableAfter;
 
@@ -54,10 +39,10 @@ class HttpClientPoolItem implements HttpClient, HttpAsyncClient
     private $client;
 
     /**
-     * @param ClientInterface|HttpAsyncClient $client
-     * @param int|null                        $reenableAfter Number of seconds until this client is enabled again after an error
+     * @param HttpClient|HttpAsyncClient|ClientInterface $client
+     * @param null|int                   $reenableAfter Number of seconds after this client is reenable
      */
-    public function __construct($client, int $reenableAfter = null)
+    public function __construct($client, $reenableAfter = null)
     {
         $this->client = new FlexibleHttpClient($client);
         $this->reenableAfter = $reenableAfter;
@@ -66,7 +51,7 @@ class HttpClientPoolItem implements HttpClient, HttpAsyncClient
     /**
      * {@inheritdoc}
      */
-    public function sendRequest(RequestInterface $request): ResponseInterface
+    public function sendRequest(RequestInterface $request)
     {
         if ($this->isDisabled()) {
             throw new Exception\RequestException('Cannot send the request as this client has been disabled', $request);
@@ -112,16 +97,21 @@ class HttpClientPoolItem implements HttpClient, HttpAsyncClient
     /**
      * Whether this client is disabled or not.
      *
-     * If the client was disabled, calling this method checks if the client can
-     * be reenabled and if so enables it.
+     * Will also reactivate this client if possible
+     *
+     * @internal
+     *
+     * @return bool
      */
-    public function isDisabled(): bool
+    public function isDisabled()
     {
-        if (null !== $this->reenableAfter && null !== $this->disabledAt) {
+        $disabledAt = $this->getDisabledAt();
+
+        if (null !== $this->reenableAfter && null !== $disabledAt) {
             // Reenable after a certain time
             $now = new \DateTime();
 
-            if (($now->getTimestamp() - $this->disabledAt->getTimestamp()) >= $this->reenableAfter) {
+            if (($now->getTimestamp() - $disabledAt->getTimestamp()) >= $this->reenableAfter) {
                 $this->enable();
 
                 return false;
@@ -130,21 +120,35 @@ class HttpClientPoolItem implements HttpClient, HttpAsyncClient
             return true;
         }
 
-        return null !== $this->disabledAt;
+        return null !== $disabledAt;
     }
 
     /**
-     * Get current number of request that are currently being sent by the underlying HTTP client.
+     * Get current number of request that is send by the underlying http client.
+     *
+     * @internal
+     *
+     * @return int
      */
-    public function getSendingRequestCount(): int
+    public function getSendingRequestCount()
     {
         return $this->sendingRequestCount;
     }
 
     /**
+     * Return when this client has been disabled or null if it's enabled.
+     *
+     * @return \DateTime|null
+     */
+    private function getDisabledAt()
+    {
+        return $this->disabledAt;
+    }
+
+    /**
      * Increment the request count.
      */
-    private function incrementRequestCount(): void
+    private function incrementRequestCount()
     {
         ++$this->sendingRequestCount;
     }
@@ -152,7 +156,7 @@ class HttpClientPoolItem implements HttpClient, HttpAsyncClient
     /**
      * Decrement the request count.
      */
-    private function decrementRequestCount(): void
+    private function decrementRequestCount()
     {
         --$this->sendingRequestCount;
     }
@@ -160,7 +164,7 @@ class HttpClientPoolItem implements HttpClient, HttpAsyncClient
     /**
      * Enable the current client.
      */
-    private function enable(): void
+    private function enable()
     {
         $this->disabledAt = null;
     }
@@ -168,7 +172,7 @@ class HttpClientPoolItem implements HttpClient, HttpAsyncClient
     /**
      * Disable the current client.
      */
-    private function disable(): void
+    private function disable()
     {
         $this->disabledAt = new \DateTime('now');
     }
