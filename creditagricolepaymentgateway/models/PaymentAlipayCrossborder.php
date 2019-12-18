@@ -2,16 +2,14 @@
 /**
  * Shop System Extensions:
  * - Terms of Use can be found at:
- * https://github.com/wirecard/prestashop-ee/blob/master/_TERMS_OF_USE
+ * https://github.com/epaiement-up2pay/prestashop/blob/master/_TERMS_OF_USE
  * - License can be found under:
- * https://github.com/wirecard/prestashop-ee/blob/master/LICENSE
+ * https://github.com/epaiement-up2pay/prestashop/blob/master/LICENSE
  */
 
 namespace WirecardEE\Prestashop\Models;
 
 use Wirecard\PaymentSdk\Transaction\AlipayCrossborderTransaction;
-use Wirecard\PaymentSdk\Config\PaymentMethodConfig;
-use Wirecard\PaymentSdk\Entity\Amount;
 use WirecardEE\Prestashop\Helper\AdditionalInformationBuilder;
 
 /**
@@ -47,8 +45,6 @@ class PaymentAlipayCrossborder extends Payment
         $this->type = self::TYPE;
         $this->name = 'Crédit Agricole Alipay Crossborder';
         $this->formFields = $this->createFormFields();
-
-        $this->refund  = array( 'debit');
     }
 
     /**
@@ -156,9 +152,11 @@ class PaymentAlipayCrossborder extends Payment
      * @return null|AlipayCrossborderTransaction
      * @since 1.0.0
      */
-    public function createTransaction($module, $cart, $values, $orderId)
+    public function createTransaction($operation = null)
     {
-        $transaction = new AlipayCrossborderTransaction();
+        $context = \Context::getContext();
+        $cart = $context->cart;
+        $transaction = $this->createTransactionInstance($operation);
 
         $additionalInformation = new AdditionalInformationBuilder();
         $transaction->setAccountHolder($additionalInformation->createAccountHolder($cart, 'billing'));
@@ -167,17 +165,14 @@ class PaymentAlipayCrossborder extends Payment
     }
 
     /**
-     * Create refund transaction
+     * Get a clean transaction instance for this payment type.
      *
-     * @param Transaction $transactionData
+     * @param string $operation
      * @return AlipayCrossborderTransaction
-     * @since 1.0.0
+     * @since 2.4.0
      */
-    public function createCancelTransaction($transactionData)
+    public function createTransactionInstance($operation = null)
     {
-        $transaction = new AlipayCrossborderTransaction();
-        $transaction->setParentTransactionId($transactionData->transaction_id);
-
-        return $transaction;
+        return new AlipayCrossborderTransaction();
     }
 }

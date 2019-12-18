@@ -2,16 +2,14 @@
 /**
  * Shop System Extensions:
  * - Terms of Use can be found at:
- * https://github.com/wirecard/prestashop-ee/blob/master/_TERMS_OF_USE
+ * https://github.com/epaiement-up2pay/prestashop/blob/master/_TERMS_OF_USE
  * - License can be found under:
- * https://github.com/wirecard/prestashop-ee/blob/master/LICENSE
+ * https://github.com/epaiement-up2pay/prestashop/blob/master/LICENSE
  */
 
 namespace WirecardEE\Prestashop\Models;
 
 use Wirecard\PaymentSdk\Transaction\PoiPiaTransaction;
-use Wirecard\PaymentSdk\Config\PaymentMethodConfig;
-use Wirecard\PaymentSdk\Entity\Amount;
 use WirecardEE\Prestashop\Helper\AdditionalInformationBuilder;
 
 /**
@@ -31,6 +29,12 @@ class PaymentPoiPia extends Payment
 
     /**
      * @var string
+     * @since 2.5.0
+     */
+    const PIA = 'pia';
+
+    /**
+     * @var string
      * @since 2.1.0
      */
     const TRANSLATION_FILE = "paymentpoipia";
@@ -47,8 +51,6 @@ class PaymentPoiPia extends Payment
         $this->type = self::TYPE;
         $this->name = 'Crédit Agricole Payment on Invoice / Payment in Advance';
         $this->formFields = $this->createFormFields();
-
-        $this->cancel  = array('authorization');
     }
 
     /**
@@ -157,21 +159,6 @@ class PaymentPoiPia extends Payment
     }
 
     /**
-     * Create Cancel PoiPia Transaction
-     *
-     * @param Transaction $transactionData
-     * @return PoiPiaTransaction
-     * @since 1.0.0
-     */
-    public function createCancelTransaction($transactionData)
-    {
-        $transaction = new PoiPiaTransaction();
-        $transaction->setParentTransactionId($transactionData->transaction_id);
-
-        return $transaction;
-    }
-
-    /**
      * Create PoiPiaTransaction
      *
      * @param \CreditAgricolePaymentGateway $module
@@ -181,13 +168,27 @@ class PaymentPoiPia extends Payment
      * @return PoiPiaTransaction
      * @since 1.0.0
      */
-    public function createTransaction($module, $cart, $values, $orderId)
+    public function createTransaction($operation = null)
     {
-        $transaction = new PoiPiaTransaction();
+        $context = \Context::getContext();
+        $cart = $context->cart;
+        $transaction = $this->createTransactionInstance($operation);
 
         $additionalInformation = new AdditionalInformationBuilder();
         $transaction->setAccountHolder($additionalInformation->createAccountHolder($cart, 'billing'));
 
         return $transaction;
+    }
+
+    /**
+     * Get a clean transaction instance for this payment type.
+     *
+     * @param string $operation
+     * @return PoiPiaTransaction
+     * @since 2.4.0
+     */
+    public function createTransactionInstance($operation = null)
+    {
+        return new PoiPiaTransaction();
     }
 }

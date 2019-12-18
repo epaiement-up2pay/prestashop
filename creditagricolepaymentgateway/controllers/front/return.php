@@ -2,9 +2,9 @@
 /**
  * Shop System Extensions:
  * - Terms of Use can be found at:
- * https://github.com/wirecard/prestashop-ee/blob/master/_TERMS_OF_USE
+ * https://github.com/epaiement-up2pay/prestashop/blob/master/_TERMS_OF_USE
  * - License can be found under:
- * https://github.com/wirecard/prestashop-ee/blob/master/LICENSE
+ * https://github.com/epaiement-up2pay/prestashop/blob/master/LICENSE
  */
 
 use WirecardEE\Prestashop\Classes\Engine\ReturnResponse;
@@ -56,7 +56,13 @@ class CreditAgricolePaymentGatewayReturnModuleFrontController extends WirecardFr
                 $response = $this->processRawResponse($response);
             }
 
-            $response_factory = new ProcessablePaymentResponseFactory($response, $order, $payment_state);
+            $response_factory = new ProcessablePaymentResponseFactory(
+                $response,
+                $order,
+                ProcessablePaymentResponseFactory::PROCESS_RESPONSE,
+                $payment_state
+            );
+
             $processing_strategy = $response_factory->getResponseProcessing();
             $processing_strategy->process();
         } catch (\Exception $exception) {

@@ -27,7 +27,6 @@
                         invoice:'{lFallback s='ratepayinvoice' mod='creditagricolepaymentgateway'}',
                         'alipay-xborder':'{lFallback s='alipay_crossborder' mod='creditagricolepaymentgateway'}',
                         p24:'{lFallback s='ptwentyfour' mod='creditagricolepaymentgateway'}',
-                        masterpass:'{lFallback s='masterpass' mod='creditagricolepaymentgateway'}'
                     };
                     $("a[data-toggle=tab]").each(function() {
                         $(this).html(translate[$(this).html().toLowerCase()]);

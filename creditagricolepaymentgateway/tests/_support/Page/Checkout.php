@@ -2,9 +2,9 @@
 /**
  * Shop System Extensions:
  * - Terms of Use can be found at:
- * https://github.com/wirecard/prestashop-ee/blob/master/_TERMS_OF_USE
+ * https://github.com/epaiement-up2pay/prestashop/blob/master/_TERMS_OF_USE
  * - License can be found under:
- * https://github.com/wirecard/prestashop-ee/blob/master/LICENSE
+ * https://github.com/epaiement-up2pay/prestashop/blob/master/LICENSE
  */
 
 namespace Page;
@@ -78,6 +78,7 @@ class Checkout extends Base
         $I = $this->tester;
         $data_field_values = $I->getDataFromDataFile('tests/_data/CustomerData.json');
 
+        $I->wait(1);
         $I->selectOption($this->getElement('Social title'), '1');
         $I->preparedFillField($this->getElement('First Name'), $data_field_values->first_name);
         $I->preparedFillField($this->getElement('Last Name'), $data_field_values->last_name);
@@ -97,6 +98,10 @@ class Checkout extends Base
     {
         $I = $this->tester;
         try {
+            if ($box === 'I agree to the terms of service')
+            {
+                $I->wait(3);
+            }
             $I->scrollTo(['class' => 'payment-options'], 20, 50);
             $I->checkOption($this->getElement($box));
         } catch (Exception $e) {
@@ -141,9 +146,16 @@ class Checkout extends Base
     {
         $I = $this->tester;
         $data_field_values = $I->getDataFromDataFile('tests/_data/PaymentMethodData.json');
-
-        $this->switchFrame();
-        $I->preparedFillField($this->getElement('Credit Card First Name'), $data_field_values->creditcard->first_name);
+        try {
+            $I->wait(5);
+            $this->switchFrame();
+            $I->preparedFillField($this->getElement('Credit Card First Name'), $data_field_values->creditcard->first_name);
+        } catch (Exception $e) {
+            $I->switchToIFrame();
+            $I->wait(15);
+            $this->switchFrame();
+            $I->preparedFillField($this->getElement('Credit Card First Name'), $data_field_values->creditcard->first_name);
+        }
         $I->preparedFillField($this->getElement('Credit Card Last Name'), $data_field_values->creditcard->last_name);
         $I->preparedFillField($this->getElement('Credit Card Card number'), $data_field_values->creditcard->card_number);
         $I->preparedFillField($this->getElement('Credit Card CVV'), $data_field_values->creditcard->cvv);

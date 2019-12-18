@@ -20,6 +20,9 @@
     <a class="btn btn-default" id="WirecardShopPluginInformation" target=_blank href="https://github.com/epaiement-up2pay/prestashop/wiki/Terms-of-Use">
         {lFallback s='terms_of_use' mod='creditagricolepaymentgateway'}
     </a>
+    <a class="btn btn-default" id="WirecardGeneralSettings" href="{$link->getAdminLink('WirecardGeneralSettings')|escape:'html':'UTF-8'}">
+        {lFallback s='general_settings' mod='creditagricolepaymentgateway'}
+    </a>
 </div>
 
 

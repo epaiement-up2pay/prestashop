@@ -2,9 +2,9 @@
 /**
  * Shop System Extensions:
  * - Terms of Use can be found at:
- * https://github.com/wirecard/prestashop-ee/blob/master/_TERMS_OF_USE
+ * https://github.com/epaiement-up2pay/prestashop/blob/master/_TERMS_OF_USE
  * - License can be found under:
- * https://github.com/wirecard/prestashop-ee/blob/master/LICENSE
+ * https://github.com/epaiement-up2pay/prestashop/blob/master/LICENSE
  */
 
 use Symfony\Component\HttpFoundation\Response;
@@ -106,7 +106,7 @@ class CreditAgricolePaymentGatewayCreditCardModuleFrontController extends Module
         $payment = new PaymentCreditCard();
 
         try {
-            $request_data = $payment->getRequestData($this->module, $this->context, $cart_id);
+            $request_data = $payment->getRequestData($this->context, $cart_id);
             $response = JsonResponse::fromJsonString($request_data);
         } catch (\Exception $exception) {
             $response = new JsonResponse(null);

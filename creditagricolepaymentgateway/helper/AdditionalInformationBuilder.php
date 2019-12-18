@@ -2,9 +2,9 @@
 /**
  * Shop System Extensions:
  * - Terms of Use can be found at:
- * https://github.com/wirecard/prestashop-ee/blob/master/_TERMS_OF_USE
+ * https://github.com/epaiement-up2pay/prestashop/blob/master/_TERMS_OF_USE
  * - License can be found under:
- * https://github.com/wirecard/prestashop-ee/blob/master/LICENSE
+ * https://github.com/epaiement-up2pay/prestashop/blob/master/LICENSE
  */
 
 namespace WirecardEE\Prestashop\Helper;
@@ -30,10 +30,14 @@ class AdditionalInformationBuilder
     /** @var CurrencyHelper */
     private $currencyHelper;
 
+    /** @var int */
+    private $roundingPrecision;
+
 
     public function __construct()
     {
         $this->currencyHelper = new CurrencyHelper();
+        $this->roundingPrecision = \Configuration::get('PS_PRICE_DISPLAY_PRECISION');
     }
 
     /**
@@ -56,7 +60,6 @@ class AdditionalInformationBuilder
                 $name = \Tools::substr($product['name'], 0, 127);
                 $grossAmount = $product['total_wt'] / $quantity;
 
-                //Check for rounding issues
                 if (\Tools::strlen(\Tools::substr(strrchr((string)$grossAmount, '.'), 1)) > 2) {
                     $grossAmount = $product['total_wt'];
                     $name .= ' x' . $quantity;
@@ -65,10 +68,10 @@ class AdditionalInformationBuilder
 
                 $netAmount = $product['total'] / $quantity;
                 $taxAmount = $grossAmount - $netAmount;
-                $taxRate = round($taxAmount / $grossAmount * 100, self::TAX_RATE_PRECISION);
+                $taxRate = \Tools::ps_round($taxAmount / $grossAmount * 100, $this->roundingPrecision);
 
                 $amount = $this->currencyHelper->getAmount(
-                    $grossAmount,
+                    \Tools::ps_round($grossAmount, $this->roundingPrecision),
                     $currency
                 );
 

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit2d70d006eb9b8e4747b1d7013492734f
+class ComposerStaticInit923d29f10ef245e4dfa5d774694b4f3c
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
@@ -24,10 +24,8 @@ class ComposerStaticInit2d70d006eb9b8e4747b1d7013492734f
             'Wirecard\\Converter\\' => 19,
             'Wirecard\\BaseUrlMatcher\\' => 24,
             'WirecardEE\\Prestashop\\Models\\' => 29,
-            'WirecardEE\\Prestashop\\Helper\\Service\\' => 37,
             'WirecardEE\\Prestashop\\Helper\\' => 29,
             'WirecardEE\\Prestashop\\Controllers\\' => 34,
-            'WirecardEE\\Prestashop\\Classes\\Config\\' => 37,
             'WirecardEE\\Prestashop\\Classes\\' => 30,
             'WirecardEE\\Prestashop\\' => 22,
             'WhichBrowser\\' => 13,
@@ -98,10 +96,6 @@ class ComposerStaticInit2d70d006eb9b8e4747b1d7013492734f
         array (
             0 => __DIR__ . '/../../..' . '/creditagricolepaymentgateway/models',
         ),
-        'WirecardEE\\Prestashop\\Helper\\Service\\' => 
-        array (
-            0 => __DIR__ . '/../../..' . '/creditagricolepaymentgateway/helper/service',
-        ),
         'WirecardEE\\Prestashop\\Helper\\' => 
         array (
             0 => __DIR__ . '/../../..' . '/creditagricolepaymentgateway/helper',
@@ -109,10 +103,6 @@ class ComposerStaticInit2d70d006eb9b8e4747b1d7013492734f
         'WirecardEE\\Prestashop\\Controllers\\' => 
         array (
             0 => __DIR__ . '/../../..' . '/creditagricolepaymentgateway/controllers',
-        ),
-        'WirecardEE\\Prestashop\\Classes\\Config\\' => 
-        array (
-            0 => __DIR__ . '/../../..' . '/creditagricolepaymentgateway/classes/config',
         ),
         'WirecardEE\\Prestashop\\Classes\\' => 
         array (
@@ -231,9 +221,9 @@ class ComposerStaticInit2d70d006eb9b8e4747b1d7013492734f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit2d70d006eb9b8e4747b1d7013492734f::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit2d70d006eb9b8e4747b1d7013492734f::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit2d70d006eb9b8e4747b1d7013492734f::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit923d29f10ef245e4dfa5d774694b4f3c::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit923d29f10ef245e4dfa5d774694b4f3c::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit923d29f10ef245e4dfa5d774694b4f3c::$classMap;
 
         }, null, ClassLoader::class);
     }
