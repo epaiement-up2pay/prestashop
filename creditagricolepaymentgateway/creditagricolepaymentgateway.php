@@ -44,7 +44,7 @@ class CreditAgricolePaymentGateway extends PaymentModule
      * @var string
      * @since 2.0.0
      */
-    const VERSION = '2.5.0';
+    const VERSION = '2.6.0';
 
     /**
      * @var string
@@ -56,7 +56,7 @@ class CreditAgricolePaymentGateway extends PaymentModule
      * @var string
      * @since 2.0.0
      */
-    const EXTENSION_HEADER_PLUGIN_NAME = 'prestashop-ee+Wirecard';
+    const EXTENSION_HEADER_PLUGIN_NAME = 'prestashop-ee+CAPS';
 
     /**
      * Payment fields for configuration
