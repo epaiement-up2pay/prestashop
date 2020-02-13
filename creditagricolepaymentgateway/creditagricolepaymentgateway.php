@@ -21,8 +21,9 @@ use WirecardEE\Prestashop\Helper\OrderManager;
 use WirecardEE\Prestashop\Helper\Service\ShopConfigurationService;
 use Wirecard\PaymentSdk\Transaction\CreditCardTransaction;
 use WirecardEE\Prestashop\Helper\TranslationHelper;
-use \WirecardEE\Prestashop\Classes\Hook\OrderStatusUpdateCommand;
-use \WirecardEE\Prestashop\Classes\Hook\BeforeOrderStatusUpdateHandler;
+use WirecardEE\Prestashop\Classes\Hook\OrderStatusUpdateCommand;
+use WirecardEE\Prestashop\Classes\Hook\BeforeOrderStatusUpdateHandler;
+use WirecardEE\Prestashop\Classes\Constants\ConfigConstants;
 
 /**
  * Class CreditAgricolePaymentGateway
@@ -44,7 +45,7 @@ class CreditAgricolePaymentGateway extends PaymentModule
      * @var string
      * @since 2.0.0
      */
-    const VERSION = '2.6.0';
+    const VERSION = '2.6.1';
 
     /**
      * @var string
@@ -294,6 +295,28 @@ class CreditAgricolePaymentGateway extends PaymentModule
         }
 
         return $values;
+    }
+
+    /**
+     * Get only non-credential values for configuration fields
+     *
+     * @return array
+     * @since 2.5.1
+     */
+    public function getNonConfidentialConfigFieldsValues()
+    {
+        $fields = $this->getConfigFieldsValues();
+        $nonConfidentialFieldValues = [];
+        foreach ($fields as $fieldKey => $fieldValue) {
+            foreach (ConfigConstants::SETTING_SUFFIX_WHITELIST as $whiteListedPrefix) {
+                if (strpos($fieldKey, $whiteListedPrefix) !== false) {
+                    $nonConfidentialFieldValues[$fieldKey] = $fieldValue;
+                    break;
+                }
+            }
+        }
+
+        return $nonConfidentialFieldValues;
     }
 
     /**

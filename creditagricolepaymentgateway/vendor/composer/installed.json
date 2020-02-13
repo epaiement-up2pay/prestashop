@@ -232,7 +232,8 @@
                 "homepage": "https://github.com/mtdowling"
             }
         ],
-        "description": "Provides a simple API and specification that abstracts away the details of HTTP into a single PHP function."
+        "description": "Provides a simple API and specification that abstracts away the details of HTTP into a single PHP function.",
+        "abandoned": true
     },
     {
         "name": "guzzlehttp/streams",
@@ -284,7 +285,8 @@
         "keywords": [
             "Guzzle",
             "stream"
-        ]
+        ],
+        "abandoned": true
     },
     {
         "name": "monolog/monolog",
@@ -1169,17 +1171,17 @@
     },
     {
         "name": "symfony/http-foundation",
-        "version": "v3.4.36",
-        "version_normalized": "3.4.36.0",
+        "version": "v3.4.37",
+        "version_normalized": "3.4.37.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/http-foundation.git",
-            "reference": "d2d0cfe8e319d9df44c4cca570710fcf221d4593"
+            "reference": "f3abd07a56111ebe6a1ad6f1cbc23e4f8983f8f5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/d2d0cfe8e319d9df44c4cca570710fcf221d4593",
-            "reference": "d2d0cfe8e319d9df44c4cca570710fcf221d4593",
+            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/f3abd07a56111ebe6a1ad6f1cbc23e4f8983f8f5",
+            "reference": "f3abd07a56111ebe6a1ad6f1cbc23e4f8983f8f5",
             "shasum": ""
         },
         "require": {
@@ -1190,7 +1192,7 @@
         "require-dev": {
             "symfony/expression-language": "~2.8|~3.0|~4.0"
         },
-        "time": "2019-11-28T12:52:59+00:00",
+        "time": "2020-01-04T12:05:51+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1225,23 +1227,23 @@
     },
     {
         "name": "symfony/options-resolver",
-        "version": "v3.4.36",
-        "version_normalized": "3.4.36.0",
+        "version": "v3.4.37",
+        "version_normalized": "3.4.37.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/options-resolver.git",
-            "reference": "b224d20be60e6f7b55cd66914379a13a0b28651a"
+            "reference": "730ef56164ed6c9356c159e9f5ff2b84d753b9ed"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/options-resolver/zipball/b224d20be60e6f7b55cd66914379a13a0b28651a",
-            "reference": "b224d20be60e6f7b55cd66914379a13a0b28651a",
+            "url": "https://api.github.com/repos/symfony/options-resolver/zipball/730ef56164ed6c9356c159e9f5ff2b84d753b9ed",
+            "reference": "730ef56164ed6c9356c159e9f5ff2b84d753b9ed",
             "shasum": ""
         },
         "require": {
             "php": "^5.5.9|>=7.0.8"
         },
-        "time": "2019-10-26T11:02:01+00:00",
+        "time": "2020-01-01T11:03:25+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1281,17 +1283,17 @@
     },
     {
         "name": "symfony/polyfill-mbstring",
-        "version": "v1.13.1",
-        "version_normalized": "1.13.1.0",
+        "version": "v1.14.0",
+        "version_normalized": "1.14.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-mbstring.git",
-            "reference": "7b4aab9743c30be783b73de055d24a39cf4b954f"
+            "reference": "34094cfa9abe1f0f14f48f490772db7a775559f2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/7b4aab9743c30be783b73de055d24a39cf4b954f",
-            "reference": "7b4aab9743c30be783b73de055d24a39cf4b954f",
+            "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/34094cfa9abe1f0f14f48f490772db7a775559f2",
+            "reference": "34094cfa9abe1f0f14f48f490772db7a775559f2",
             "shasum": ""
         },
         "require": {
@@ -1300,11 +1302,11 @@
         "suggest": {
             "ext-mbstring": "For best performance"
         },
-        "time": "2019-11-27T14:18:11+00:00",
+        "time": "2020-01-13T11:15:53+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.13-dev"
+                "dev-master": "1.14-dev"
             }
         },
         "installation-source": "dist",
@@ -1342,28 +1344,28 @@
     },
     {
         "name": "symfony/polyfill-php70",
-        "version": "v1.13.1",
-        "version_normalized": "1.13.1.0",
+        "version": "v1.14.0",
+        "version_normalized": "1.14.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-php70.git",
-            "reference": "af23c7bb26a73b850840823662dda371484926c4"
+            "reference": "419c4940024c30ccc033650373a1fe13890d3255"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/af23c7bb26a73b850840823662dda371484926c4",
-            "reference": "af23c7bb26a73b850840823662dda371484926c4",
+            "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/419c4940024c30ccc033650373a1fe13890d3255",
+            "reference": "419c4940024c30ccc033650373a1fe13890d3255",
             "shasum": ""
         },
         "require": {
             "paragonie/random_compat": "~1.0|~2.0|~9.99",
             "php": ">=5.3.3"
         },
-        "time": "2019-11-27T13:56:44+00:00",
+        "time": "2020-01-13T11:15:53+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.13-dev"
+                "dev-master": "1.14-dev"
             }
         },
         "installation-source": "dist",
@@ -1403,17 +1405,17 @@
     },
     {
         "name": "whichbrowser/parser",
-        "version": "v2.0.40",
-        "version_normalized": "2.0.40.0",
+        "version": "v2.0.42",
+        "version_normalized": "2.0.42.0",
         "source": {
             "type": "git",
             "url": "https://github.com/WhichBrowser/Parser-PHP.git",
-            "reference": "eebd583e67ef3633a6fc607f877daadf4579dfe6"
+            "reference": "4899110cd2f87b01e04ced62dbb9dec541031dee"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/WhichBrowser/Parser-PHP/zipball/eebd583e67ef3633a6fc607f877daadf4579dfe6",
-            "reference": "eebd583e67ef3633a6fc607f877daadf4579dfe6",
+            "url": "https://api.github.com/repos/WhichBrowser/Parser-PHP/zipball/4899110cd2f87b01e04ced62dbb9dec541031dee",
+            "reference": "4899110cd2f87b01e04ced62dbb9dec541031dee",
             "shasum": ""
         },
         "require": {
@@ -1431,7 +1433,7 @@
         "suggest": {
             "cache/array-adapter": "Allows testing of the caching functionality"
         },
-        "time": "2019-12-09T11:34:11+00:00",
+        "time": "2020-02-12T10:54:23+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
