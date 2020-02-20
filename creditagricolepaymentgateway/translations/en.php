@@ -253,11 +253,10 @@ $_MODULE['<{creditagricolepaymentgateway}prestashop>sepadirectdebit_4f75ff5e69e0
 $_MODULE['<{creditagricolepaymentgateway}prestashop>sepadirectdebit_963781e40052d2e34f572c9f7b66db3f'] = 'I have read and accepted the SEPA Direct Debit Mandate information.';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>sepadirectdebit_10aec35353f9c4096a71c38654c3d402'] = 'Cancel';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>sepadirectdebit_016ee38c4b145a0841684d8b22d3db84'] = 'Confirm';
-$_MODULE['<{creditagricolepaymentgateway}prestashop>creditcard_list_024c0eb2f6a44bd14a71b780cc114723'] = 'Use card';
-$_MODULE['<{creditagricolepaymentgateway}prestashop>creditcard_list_3fcc1446b74b3c855555d4331bb7f53f'] = 'Delete card';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>creditcard_f0a5e748d9be590b9fc4a956617f3d10'] = 'Close';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>creditcard_de1c13a642c022356636de5f2b6ed8c6'] = 'Credit card selection';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>creditcard_10aec35353f9c4096a71c38654c3d402'] = 'Cancel';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>creditcard_024c0eb2f6a44bd14a71b780cc114723'] = 'Use card';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>creditcard_4eb57eb6288bc1ae4efd419ff4a3b4ca'] = 'Use saved credit card';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>creditcard_dd6655a20f19076c518afd9a4e534da5'] = 'Credit Card is selected. To use another credit card, click \"Use new credit card\".';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>creditcard_5809325b75110f574df44ec5eec4032b'] = 'Use new credit card';
