@@ -1171,17 +1171,17 @@
     },
     {
         "name": "symfony/http-foundation",
-        "version": "v3.4.37",
-        "version_normalized": "3.4.37.0",
+        "version": "v3.4.38",
+        "version_normalized": "3.4.38.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/http-foundation.git",
-            "reference": "f3abd07a56111ebe6a1ad6f1cbc23e4f8983f8f5"
+            "reference": "4d440be93adcfd5e4ee0bdc7acd1c3260625728f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/f3abd07a56111ebe6a1ad6f1cbc23e4f8983f8f5",
-            "reference": "f3abd07a56111ebe6a1ad6f1cbc23e4f8983f8f5",
+            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/4d440be93adcfd5e4ee0bdc7acd1c3260625728f",
+            "reference": "4d440be93adcfd5e4ee0bdc7acd1c3260625728f",
             "shasum": ""
         },
         "require": {
@@ -1192,7 +1192,7 @@
         "require-dev": {
             "symfony/expression-language": "~2.8|~3.0|~4.0"
         },
-        "time": "2020-01-04T12:05:51+00:00",
+        "time": "2020-02-06T08:18:51+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1227,8 +1227,8 @@
     },
     {
         "name": "symfony/options-resolver",
-        "version": "v3.4.37",
-        "version_normalized": "3.4.37.0",
+        "version": "v3.4.38",
+        "version_normalized": "3.4.38.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/options-resolver.git",

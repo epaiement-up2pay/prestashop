@@ -212,6 +212,9 @@ $_MODULE['<{creditagricolepaymentgateway}prestashop>wirecardajax_adf26da509e5836
 $_MODULE['<{creditagricolepaymentgateway}prestashop>switchinput_f9e92a0727609b56780f28afa11da702'] = '활성화됨';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>switchinput_9963e13ca603bfe6f09af5673b058eb7'] = '비활성화됨';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>generalsettingsservice_98c717a2e7b0e8ff05988fbf8f5e8b9f'] = '';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>ordermanager_b0ff4ac4438ae8ef3f9883948315cdcf'] = 'Crédit Agricole Payment started';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>ordermanager_5b16deb11b7f93bc6d2dfe2e1ca5f4b3'] = 'Crédit Agricole Payment authorized';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>ordermanager_8eec2577851ed66a286d224c7270bb15'] = 'Crédit Agricole Payment awaiting';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>view_fbedc569ae12c464ee7929c3d8a1a949'] = 'Back';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>view_c01d298d870c928aef65a36ed62c30ea'] = '트랜잭션 정보';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>view_3e3e086087769006d29d46a8b34264af'] = 'Transaction';
