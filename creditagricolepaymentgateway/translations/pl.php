@@ -38,7 +38,7 @@ $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentpoipia_1317891e41c892
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentpoipia_dcf1eada7b5e21500790ee75ebc2be5b'] = 'Merchant Account ID';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentpoipia_b40c397e1e1c55f6ea8eaec955657c4a'] = 'Secret Key';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentpoipia_e76e5f6766ac1969a727bd46611126e5'] = 'Base URL';
-$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentpoipia_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.wirecard.com)';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentpoipia_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.secure.epaiement-up2pay.fr)';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentpoipia_ca223103c3b51750b19e5ecd58b67ffb'] = 'Użytkownik HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentpoipia_77de2a7d1e366bd416e2a9e186e9f268'] = 'Hasło HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentpoipia_fc80b265d271b7df026498f54ec3bca7'] = 'Payment Type';
@@ -54,7 +54,7 @@ $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentguaranteedinvoicerate
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentguaranteedinvoiceratepay_dcf1eada7b5e21500790ee75ebc2be5b'] = 'Merchant Account ID';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentguaranteedinvoiceratepay_b40c397e1e1c55f6ea8eaec955657c4a'] = 'Secret Key';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentguaranteedinvoiceratepay_e76e5f6766ac1969a727bd46611126e5'] = 'Base URL';
-$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentguaranteedinvoiceratepay_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.wirecard.com)';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentguaranteedinvoiceratepay_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.secure.epaiement-up2pay.fr)';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentguaranteedinvoiceratepay_ca223103c3b51750b19e5ecd58b67ffb'] = 'Użytkownik HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentguaranteedinvoiceratepay_77de2a7d1e366bd416e2a9e186e9f268'] = 'Hasło HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentguaranteedinvoiceratepay_a0d5052638376697cf41c9de13e2e5e0'] = 'Adres dostawy i rachunku musi być identyczny';
@@ -73,7 +73,7 @@ $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsepadirectdebit_4dc09
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsepadirectdebit_dcf1eada7b5e21500790ee75ebc2be5b'] = 'Merchant Account ID';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsepadirectdebit_b40c397e1e1c55f6ea8eaec955657c4a'] = 'Secret Key';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsepadirectdebit_e76e5f6766ac1969a727bd46611126e5'] = 'Base URL';
-$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsepadirectdebit_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.wirecard.com)';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsepadirectdebit_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.secure.epaiement-up2pay.fr)';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsepadirectdebit_ca223103c3b51750b19e5ecd58b67ffb'] = 'Użytkownik HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsepadirectdebit_77de2a7d1e366bd416e2a9e186e9f268'] = 'Hasło HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsepadirectdebit_a47a202458ffb9b73412480df233c826'] = 'Unikalny identyfikator odbiorcy';
@@ -95,7 +95,7 @@ $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentpaypal_85f55082a01204
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentpaypal_dcf1eada7b5e21500790ee75ebc2be5b'] = 'Merchant Account ID';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentpaypal_b40c397e1e1c55f6ea8eaec955657c4a'] = 'Secret Key';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentpaypal_e76e5f6766ac1969a727bd46611126e5'] = 'Base URL';
-$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentpaypal_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.wirecard.com)';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentpaypal_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.secure.epaiement-up2pay.fr)';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentpaypal_ca223103c3b51750b19e5ecd58b67ffb'] = 'Użytkownik HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentpaypal_77de2a7d1e366bd416e2a9e186e9f268'] = 'Hasło HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentpaypal_b39c8900735997fa7293592e32228950'] = 'Zapłata';
@@ -112,7 +112,7 @@ $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentideal_72532bf07ecd92a
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentideal_dcf1eada7b5e21500790ee75ebc2be5b'] = 'Merchant Account ID';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentideal_b40c397e1e1c55f6ea8eaec955657c4a'] = 'Secret Key';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentideal_e76e5f6766ac1969a727bd46611126e5'] = 'Base URL';
-$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentideal_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.wirecard.com)';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentideal_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.secure.epaiement-up2pay.fr)';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentideal_ca223103c3b51750b19e5ecd58b67ffb'] = 'Użytkownik HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentideal_77de2a7d1e366bd416e2a9e186e9f268'] = 'Hasło HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentideal_3ea9eb5a6ed433246bc75c7016ac89bc'] = 'Descriptor';
@@ -129,9 +129,9 @@ $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_3832183c33
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_8716d505e9afbc3e3d7889559c21a64f'] = 'Non 3-D Secure Max Limit';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_73c6b1b2ac87eb9d185abf0baa50e881'] = '3-D Secure Min Limit';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_e76e5f6766ac1969a727bd46611126e5'] = 'Base URL';
-$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.wirecard.com)';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.secure.epaiement-up2pay.fr)';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_af67a67203fe6f6aa0720c703bc6822e'] = 'Crédit Agricole Payment Page v2 Address (URL WPP v2)';
-$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_056fc506785814a1f5763e4fac48880a'] = 'Crédit Agricole Payment Page v2 Address (URL WPP v2) (e.g. https://wpp.wirecard.com).';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_056fc506785814a1f5763e4fac48880a'] = 'Crédit Agricole Payment Page v2 Address (URL WPP v2) (e.g. https://page.secure.epaiement-up2pay.fr).';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_ca223103c3b51750b19e5ecd58b67ffb'] = 'Użytkownik HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_77de2a7d1e366bd416e2a9e186e9f268'] = 'Hasło HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentcreditcard_b39c8900735997fa7293592e32228950'] = 'Zapłata';
@@ -152,7 +152,7 @@ $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentptwentyfour_cc62e1020
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentptwentyfour_dcf1eada7b5e21500790ee75ebc2be5b'] = 'Merchant Account ID';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentptwentyfour_b40c397e1e1c55f6ea8eaec955657c4a'] = 'Secret Key';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentptwentyfour_e76e5f6766ac1969a727bd46611126e5'] = 'Base URL';
-$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentptwentyfour_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.wirecard.com)';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentptwentyfour_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.secure.epaiement-up2pay.fr)';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentptwentyfour_ca223103c3b51750b19e5ecd58b67ffb'] = 'Użytkownik HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentptwentyfour_77de2a7d1e366bd416e2a9e186e9f268'] = 'Hasło HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentptwentyfour_3ea9eb5a6ed433246bc75c7016ac89bc'] = 'Descriptor';
@@ -165,7 +165,7 @@ $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentalipaycrossborder_9e7
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentalipaycrossborder_dcf1eada7b5e21500790ee75ebc2be5b'] = 'Merchant Account ID';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentalipaycrossborder_b40c397e1e1c55f6ea8eaec955657c4a'] = 'Secret Key';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentalipaycrossborder_e76e5f6766ac1969a727bd46611126e5'] = 'Base URL';
-$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentalipaycrossborder_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.wirecard.com)';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentalipaycrossborder_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.secure.epaiement-up2pay.fr)';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentalipaycrossborder_ca223103c3b51750b19e5ecd58b67ffb'] = 'Użytkownik HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentalipaycrossborder_77de2a7d1e366bd416e2a9e186e9f268'] = 'Hasło HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentalipaycrossborder_3ea9eb5a6ed433246bc75c7016ac89bc'] = 'Descriptor';
@@ -176,7 +176,7 @@ $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsepacredittransfer_55
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsepacredittransfer_dcf1eada7b5e21500790ee75ebc2be5b'] = 'Merchant Account ID';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsepacredittransfer_b40c397e1e1c55f6ea8eaec955657c4a'] = 'Secret Key';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsepacredittransfer_e76e5f6766ac1969a727bd46611126e5'] = 'Base URL';
-$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsepacredittransfer_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.wirecard.com)';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsepacredittransfer_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.secure.epaiement-up2pay.fr)';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsepacredittransfer_ca223103c3b51750b19e5ecd58b67ffb'] = 'Użytkownik HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsepacredittransfer_77de2a7d1e366bd416e2a9e186e9f268'] = 'Hasło HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsepacredittransfer_7daacf9143e60bd1d97b926e8d0754d6'] = 'Test konfiguracji kart kredytowych';
@@ -187,7 +187,7 @@ $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsofort_8fdf932c3818a2
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsofort_dcf1eada7b5e21500790ee75ebc2be5b'] = 'Merchant Account ID';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsofort_b40c397e1e1c55f6ea8eaec955657c4a'] = 'Secret Key';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsofort_e76e5f6766ac1969a727bd46611126e5'] = 'Base URL';
-$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsofort_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.wirecard.com)';
+$_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsofort_572d91d7af71a9743520ad69533a7924'] = 'Elastic engine base url. (e.g. https://api.secure.epaiement-up2pay.fr)';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsofort_ca223103c3b51750b19e5ecd58b67ffb'] = 'Użytkownik HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsofort_77de2a7d1e366bd416e2a9e186e9f268'] = 'Hasło HTTP';
 $_MODULE['<{creditagricolepaymentgateway}prestashop>paymentsofort_36245276e84306a410a410785ac986b3'] = 'Wyślij dodatkową informację';

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit12f1af03d0d92e0aafcdb31d94741070
+class ComposerStaticInitced14afd94acc246e5497a2ad1a1e43b
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
@@ -21,6 +21,7 @@ class ComposerStaticInit12f1af03d0d92e0aafcdb31d94741070
         array (
             'Wirecard\\PaymentSdk\\' => 20,
             'Wirecard\\IsoToPayPal\\' => 21,
+            'Wirecard\\Credentials\\' => 21,
             'Wirecard\\Converter\\' => 19,
             'Wirecard\\BaseUrlMatcher\\' => 24,
             'WirecardEE\\Prestashop\\Models\\' => 29,
@@ -83,6 +84,10 @@ class ComposerStaticInit12f1af03d0d92e0aafcdb31d94741070
         'Wirecard\\IsoToPayPal\\' => 
         array (
             0 => __DIR__ . '/..' . '/wirecard/iso-paypal-converter/src',
+        ),
+        'Wirecard\\Credentials\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wirecard/extension-credentials-module/src',
         ),
         'Wirecard\\Converter\\' => 
         array (
@@ -221,9 +226,9 @@ class ComposerStaticInit12f1af03d0d92e0aafcdb31d94741070
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit12f1af03d0d92e0aafcdb31d94741070::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit12f1af03d0d92e0aafcdb31d94741070::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit12f1af03d0d92e0aafcdb31d94741070::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitced14afd94acc246e5497a2ad1a1e43b::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitced14afd94acc246e5497a2ad1a1e43b::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitced14afd94acc246e5497a2ad1a1e43b::$classMap;
 
         }, null, ClassLoader::class);
     }
