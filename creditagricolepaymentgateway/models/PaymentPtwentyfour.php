@@ -43,7 +43,7 @@ class PaymentPtwentyfour extends Payment
         parent::__construct();
 
         $this->type = self::TYPE;
-        $this->name = 'Crédit Agricole Przelewy24';
+        $this->name = 'Przelewy24';
         $this->formFields = $this->createFormFields();
     }
 

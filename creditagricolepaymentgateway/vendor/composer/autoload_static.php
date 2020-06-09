@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitced14afd94acc246e5497a2ad1a1e43b
+class ComposerStaticInit292aef2a984b3fa8c69d39f7cc261f1b
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
@@ -21,6 +21,7 @@ class ComposerStaticInitced14afd94acc246e5497a2ad1a1e43b
         array (
             'Wirecard\\PaymentSdk\\' => 20,
             'Wirecard\\IsoToPayPal\\' => 21,
+            'Wirecard\\ExtensionOrderStateModule\\' => 35,
             'Wirecard\\Credentials\\' => 21,
             'Wirecard\\Converter\\' => 19,
             'Wirecard\\BaseUrlMatcher\\' => 24,
@@ -51,7 +52,6 @@ class ComposerStaticInitced14afd94acc246e5497a2ad1a1e43b
         ),
         'M' => 
         array (
-            'MyCLabs\\Enum\\' => 13,
             'Monolog\\' => 8,
         ),
         'H' => 
@@ -84,6 +84,10 @@ class ComposerStaticInitced14afd94acc246e5497a2ad1a1e43b
         'Wirecard\\IsoToPayPal\\' => 
         array (
             0 => __DIR__ . '/..' . '/wirecard/iso-paypal-converter/src',
+        ),
+        'Wirecard\\ExtensionOrderStateModule\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wirecard/extension-order-state-module/src',
         ),
         'Wirecard\\Credentials\\' => 
         array (
@@ -158,10 +162,6 @@ class ComposerStaticInitced14afd94acc246e5497a2ad1a1e43b
         array (
             0 => __DIR__ . '/..' . '/psr/cache/src',
         ),
-        'MyCLabs\\Enum\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/myclabs/php-enum/src',
-        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
@@ -226,9 +226,9 @@ class ComposerStaticInitced14afd94acc246e5497a2ad1a1e43b
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitced14afd94acc246e5497a2ad1a1e43b::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitced14afd94acc246e5497a2ad1a1e43b::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitced14afd94acc246e5497a2ad1a1e43b::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit292aef2a984b3fa8c69d39f7cc261f1b::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit292aef2a984b3fa8c69d39f7cc261f1b::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit292aef2a984b3fa8c69d39f7cc261f1b::$classMap;
 
         }, null, ClassLoader::class);
     }

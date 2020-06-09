@@ -42,7 +42,7 @@ class PaymentSepaCreditTransfer extends Payment
         parent::__construct();
 
         $this->type = self::TYPE;
-        $this->name = 'Crédit Agricole SEPA Credit Transfer';
+        $this->name = 'SEPA Credit Transfer';
         $this->formFields = $this->createFormFields();
         $this->setLoadJs(true);
     }

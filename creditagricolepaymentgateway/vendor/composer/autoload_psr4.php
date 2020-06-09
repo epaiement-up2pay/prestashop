@@ -8,6 +8,7 @@ $baseDir = dirname(dirname($vendorDir));
 return array(
     'Wirecard\\PaymentSdk\\' => array($vendorDir . '/wirecard/payment-sdk-php/src'),
     'Wirecard\\IsoToPayPal\\' => array($vendorDir . '/wirecard/iso-paypal-converter/src'),
+    'Wirecard\\ExtensionOrderStateModule\\' => array($vendorDir . '/wirecard/extension-order-state-module/src'),
     'Wirecard\\Credentials\\' => array($vendorDir . '/wirecard/extension-credentials-module/src'),
     'Wirecard\\Converter\\' => array($vendorDir . '/wirecard/io-converter/src'),
     'Wirecard\\BaseUrlMatcher\\' => array($vendorDir . '/wirecard/base-url-matcher/src'),
@@ -26,7 +27,6 @@ return array(
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'Psr\\Cache\\' => array($vendorDir . '/psr/cache/src'),
-    'MyCLabs\\Enum\\' => array($vendorDir . '/myclabs/php-enum/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'Http\\Promise\\' => array($vendorDir . '/php-http/promise/src'),
     'Http\\Message\\' => array($vendorDir . '/php-http/message/src', $vendorDir . '/php-http/message-factory/src'),

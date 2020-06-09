@@ -49,7 +49,7 @@ class PaymentGuaranteedInvoiceRatepay extends Payment
         parent::__construct();
 
         $this->type = self::TYPE;
-        $this->name = 'Crédit Agricole Guaranteed Invoice';
+        $this->name = 'Facture avec garantie de paiement par Crédit Agricole';
         $this->formFields = $this->createFormFields();
         $this->setLoadJs(true);
     }

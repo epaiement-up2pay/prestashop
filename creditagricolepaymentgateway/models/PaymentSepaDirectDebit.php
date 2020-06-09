@@ -9,11 +9,11 @@
 
 namespace WirecardEE\Prestashop\Models;
 
+use Wirecard\PaymentSdk\Entity\AccountHolder;
+use Wirecard\PaymentSdk\Entity\Mandate;
 use Wirecard\PaymentSdk\Transaction\Operation;
 use Wirecard\PaymentSdk\Transaction\SepaCreditTransferTransaction;
 use Wirecard\PaymentSdk\Transaction\SepaDirectDebitTransaction;
-use Wirecard\PaymentSdk\Entity\AccountHolder;
-use Wirecard\PaymentSdk\Entity\Mandate;
 
 /**
  * Class PaymentSepaDirectDebit
@@ -46,7 +46,7 @@ class PaymentSepaDirectDebit extends Payment
         parent::__construct();
 
         $this->type = self::TYPE;
-        $this->name = 'Crédit Agricole SEPA Direct Debit';
+        $this->name = 'Prélèvement SEPA';
         $this->formFields = $this->createFormFields();
         $this->setLoadJs(true);
     }

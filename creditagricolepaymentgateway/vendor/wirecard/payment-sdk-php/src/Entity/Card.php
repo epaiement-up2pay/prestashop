@@ -88,6 +88,33 @@ class Card implements MappableEntity
     }
 
     /**
+     * @return string
+     * @since 4.0.1
+     */
+    public function getExpirationYear()
+    {
+        return $this->expirationYear;
+    }
+
+    /**
+     * @return string
+     * @since 4.0.1
+     */
+    public function getExpirationMonth()
+    {
+        return $this->expirationMonth;
+    }
+
+    /**
+     * @return string
+     * @since 4.0.1
+     */
+    public function getCardType()
+    {
+        return $this->type;
+    }
+
+    /**
      * Parse card from response xml
      * @param SimpleXMLElement $simpleXml
      * @since 3.2.0
@@ -95,10 +122,19 @@ class Card implements MappableEntity
     private function parseFromXml($simpleXml)
     {
         if (isset($simpleXml->{'card-token'}->{'masked-account-number'})) {
-            $this->maskedPan = $simpleXml->{'card-token'}->{'masked-account-number'};
+            $this->maskedPan = $simpleXml->{'card-token'}->{'masked-account-number'}->__toString();
         }
         if (isset($simpleXml->{'card-token'}->{'token-id'})) {
-            $this->token = $simpleXml->{'card-token'}->{'token-id'};
+            $this->token = $simpleXml->{'card-token'}->{'token-id'}->__toString();
+        }
+        if (isset($simpleXml->{'card'}->{'card-type'})) {
+            $this->type = $simpleXml->{'card'}->{'card-type'}->__toString();
+        }
+        if (isset($simpleXml->{'card'}->{'expiration-month'})) {
+            $this->expirationMonth = $simpleXml->{'card'}->{'expiration-month'}->__toString();
+        }
+        if (isset($simpleXml->{'card'}->{'expiration-year'})) {
+            $this->expirationYear = $simpleXml->{'card'}->{'expiration-year'}->__toString();
         }
     }
 
