@@ -24,5 +24,3 @@
         {lFallback s='general_settings' mod='creditagricolepaymentgateway'}
     </a>
 </div>
-
-

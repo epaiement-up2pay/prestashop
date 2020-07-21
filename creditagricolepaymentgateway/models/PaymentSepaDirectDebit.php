@@ -46,7 +46,7 @@ class PaymentSepaDirectDebit extends Payment
         parent::__construct();
 
         $this->type = self::TYPE;
-        $this->name = 'Prélèvement SEPA';
+        $this->name = $this->getTranslatedString('sepadd');
         $this->formFields = $this->createFormFields();
         $this->setLoadJs(true);
     }
