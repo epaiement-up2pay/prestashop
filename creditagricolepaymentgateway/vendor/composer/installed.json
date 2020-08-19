@@ -290,17 +290,17 @@
     },
     {
         "name": "monolog/monolog",
-        "version": "1.25.4",
-        "version_normalized": "1.25.4.0",
+        "version": "1.25.5",
+        "version_normalized": "1.25.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/Seldaek/monolog.git",
-            "reference": "3022efff205e2448b560c833c6fbbf91c3139168"
+            "reference": "1817faadd1846cd08be9a49e905dc68823bc38c0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Seldaek/monolog/zipball/3022efff205e2448b560c833c6fbbf91c3139168",
-            "reference": "3022efff205e2448b560c833c6fbbf91c3139168",
+            "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1817faadd1846cd08be9a49e905dc68823bc38c0",
+            "reference": "1817faadd1846cd08be9a49e905dc68823bc38c0",
             "shasum": ""
         },
         "require": {
@@ -335,7 +335,7 @@
             "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
             "sentry/sentry": "Allow sending log messages to a Sentry server"
         },
-        "time": "2020-05-22T07:31:27+00:00",
+        "time": "2020-07-23T08:35:51+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1136,17 +1136,17 @@
     },
     {
         "name": "symfony/http-foundation",
-        "version": "v3.4.42",
-        "version_normalized": "3.4.42.0",
+        "version": "v3.4.43",
+        "version_normalized": "3.4.43.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/http-foundation.git",
-            "reference": "fbd216d2304b1a3fe38d6392b04729c8dd356359"
+            "reference": "5219dba1253aa07ed3ad82f73c08146fb3f517d0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/fbd216d2304b1a3fe38d6392b04729c8dd356359",
-            "reference": "fbd216d2304b1a3fe38d6392b04729c8dd356359",
+            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/5219dba1253aa07ed3ad82f73c08146fb3f517d0",
+            "reference": "5219dba1253aa07ed3ad82f73c08146fb3f517d0",
             "shasum": ""
         },
         "require": {
@@ -1157,7 +1157,7 @@
         "require-dev": {
             "symfony/expression-language": "~2.8|~3.0|~4.0"
         },
-        "time": "2020-05-16T13:15:54+00:00",
+        "time": "2020-07-23T09:37:51+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1206,23 +1206,23 @@
     },
     {
         "name": "symfony/options-resolver",
-        "version": "v3.4.42",
-        "version_normalized": "3.4.42.0",
+        "version": "v3.4.43",
+        "version_normalized": "3.4.43.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/options-resolver.git",
-            "reference": "3b9fe6db7fe3694307d182dd73983584af77d5fd"
+            "reference": "0edf31d2e34f4adb72dd4d2e4a8aa21f84b943e5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/options-resolver/zipball/3b9fe6db7fe3694307d182dd73983584af77d5fd",
-            "reference": "3b9fe6db7fe3694307d182dd73983584af77d5fd",
+            "url": "https://api.github.com/repos/symfony/options-resolver/zipball/0edf31d2e34f4adb72dd4d2e4a8aa21f84b943e5",
+            "reference": "0edf31d2e34f4adb72dd4d2e4a8aa21f84b943e5",
             "shasum": ""
         },
         "require": {
             "php": "^5.5.9|>=7.0.8"
         },
-        "time": "2020-05-21T13:02:25+00:00",
+        "time": "2020-07-08T17:07:26+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1276,8 +1276,8 @@
     },
     {
         "name": "symfony/polyfill-mbstring",
-        "version": "v1.18.0",
-        "version_normalized": "1.18.0.0",
+        "version": "v1.18.1",
+        "version_normalized": "1.18.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -1355,8 +1355,8 @@
     },
     {
         "name": "symfony/polyfill-php70",
-        "version": "v1.18.0",
-        "version_normalized": "1.18.0.0",
+        "version": "v1.18.1",
+        "version_normalized": "1.18.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-php70.git",
