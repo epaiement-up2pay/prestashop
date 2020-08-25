@@ -4,9 +4,12 @@
 * https://github.com/epaiement-up2pay/prestashop/blob/master/_TERMS_OF_USE
 * - License can be found under:
 * https://github.com/epaiement-up2pay/prestashop/blob/master/LICENSE
+ * @author Crédit Agricole
+ * @copyright Copyright (c) 2020 Crédit Agricole, Einsteinring 35, 85609 Aschheim, Germany
+ * @license MIT License
 *}
 
-<form id="payment-form" action="{$action_link}" method="POST">
+<form id="payment-form" action="{$action_link|escape:'htmlall':'UTF-8'}" method="POST">
     <script language='JavaScript'>
         var di = {
             t:'{$device_identification|escape:'htmlall':'UTF-8'}',

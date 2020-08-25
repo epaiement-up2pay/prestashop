@@ -5,6 +5,9 @@
  * https://github.com/epaiement-up2pay/prestashop/blob/master/_TERMS_OF_USE
  * - License can be found under:
  * https://github.com/epaiement-up2pay/prestashop/blob/master/LICENSE
+ * @author Crédit Agricole
+ * @copyright Copyright (c) 2020 Crédit Agricole, Einsteinring 35, 85609 Aschheim, Germany
+ * @license MIT License
  */
 
 namespace WirecardEE\Prestashop\Helper;
@@ -173,7 +176,7 @@ class AdditionalInformationBuilder
         $customerPhoneMobile = trim($address->phone_mobile);
 
         $accountHolder = new AccountHolder();
-        $accountHolder->setAddress($this->createAddressData($address, $type));
+        $accountHolder->setAddress($this->createAddressData($address));
         $accountHolder->setEmail($customer->email);
         $accountHolder->setFirstName($customerFirstName);
         $accountHolder->setLastName($customerLastName);
@@ -204,11 +207,10 @@ class AdditionalInformationBuilder
      * Create addressdata for shipping or billing
      *
      * @param \Address $source
-     * @param string $type
      * @return Address
      * @since 1.0.0
      */
-    public function createAddressData($source, $type)
+    public function createAddressData($source)
     {
         $country = new \Country($source->id_country);
 

@@ -5,6 +5,9 @@
  * https://github.com/epaiement-up2pay/prestashop/blob/master/_TERMS_OF_USE
  * - License can be found under:
  * https://github.com/epaiement-up2pay/prestashop/blob/master/LICENSE
+ * @author Crédit Agricole
+ * @copyright Copyright (c) 2020 Crédit Agricole, Einsteinring 35, 85609 Aschheim, Germany
+ * @license MIT License
  */
 
 namespace WirecardEE\Prestashop\Classes\Hook;
@@ -33,10 +36,10 @@ class OrderStatusUpdateCommand
      */
     public function __construct($orderState, $orderId)
     {
-        if (!intval($orderId) || !is_numeric($orderId)) {
+        if (!(int) $orderId || !is_numeric($orderId)) {
             throw new Exception("orderId is not numeric!");
         }
-        $this->orderId = intval($orderId);
+        $this->orderId = (int) $orderId;
         if (!$orderState instanceof OrderState) {
             throw new Exception("orderState param is not instance of OrderState!");
         }
